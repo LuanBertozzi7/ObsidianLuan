@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"6a92373bf7d513d8","type":"text","text":"Spark","x":-160,"y":-140,"width":120,"height":60,"color":"2"},
+		{"id":"49dbbc54b83bf398","type":"text","text":"Otimizações de servidores ","x":76,"y":-69,"width":250,"height":89,"color":"2"},
+		{"id":"40c2a5bd3cd8421a","type":"text","text":"Server Thread","x":345,"y":-268,"width":195,"height":60,"color":"2"},
+		{"id":"fe7920dfde283947","type":"text","text":"**MinecraftServer.waitUntilNextTick**\ntempo que o servidor usa pra completar 20 de tps, normalmente isso é os tick's livre ","x":694,"y":-432,"width":466,"height":132,"color":"2"},
+		{"id":"37983899ab466e0e","type":"text","text":"**MinecraftServer.tickServer** \no método principal do servidor\nonde todos os ticks são somados","x":694,"y":-260,"width":466,"height":150,"color":"2"},
+		{"id":"8f2428e270bb9ce7","type":"text","text":"**DedicatedServer.tickChildren**\nMétodo responsavel a garantir que o servidor receba atualizações doque está acontecendo constantemente","x":927,"y":20,"width":340,"height":209,"color":"2"},
+		{"id":"aecd9cc0e1a00bca","type":"text","text":"**ServerLevel.tick**\nResponsavel por processar varias ações e atualizações essenciais do servidor","x":1400,"y":229,"width":317,"height":160,"color":"2"},
+		{"id":"e36f7cca16524f83","type":"text","text":"**EntityTickList.forEach**\nAqui ficam os ticks responsaveis pelas entidades do servidor, que são divididas em 2 categorias\nATIVAS/PASSIVAS","x":1760,"y":-244,"width":369,"height":220,"color":"2"},
+		{"id":"6bc1fc9d664c57c9","x":2300,"y":-152,"width":347,"height":166,"color":"2","type":"text","text":"**ServerLevel$$Lambda.0x00007f68742a2eb8.accept()**\nProcessa as entidades a cada ciclo do servidor"},
+		{"id":"009f2111c9f1e5c8","x":2760,"y":-69,"width":562,"height":149,"color":"2","type":"text","text":"**net.minecraft.server.level.ServerLevel.lambda$tick$4**\né um método utilizado para realizar tarefas no ciclo de atualização do servidor."},
+		{"id":"52ee17334dda7536","x":3520,"y":-324,"width":466,"height":161,"color":"2","type":"text","text":"**ServerLevel.tickNonPassenger**\nFoca em entidades que não estão montada em outras entidades\n(jogador, mob, item)"},
+		{"id":"9b19e3340b24ee8a","x":3520,"y":-69,"width":466,"height":149,"color":"2","type":"text","text":"**Mob.checkDespawn**\nCheca se uma entidade pode ser despawnada a cada ciclo do servidor"},
+		{"id":"6e57ffa91a13dfc7","x":3520,"y":160,"width":466,"height":149,"color":"2","type":"text","text":"**erverLevel.moonrise$midTickTasks**\nMétodo que cuida de tarefas programadas do servidor, paper"},
+		{"id":"0b199febb1927d28","x":3580,"y":-680,"width":480,"height":200,"color":"2","type":"text","text":"**Villager.tick**\nMétodo responsavel pelos villagers, atualiza o estado de 1 aldeão, verificar proximidade de serviço, de uma cama, e a possibilidade de reabastecimento de inventário do msm"},
+		{"id":"dbcd7968292c4891","x":3736,"y":-800,"width":250,"height":68,"color":"2","type":"text","text":"**Mob.tick**"},
+		{"id":"a62fe37cf15fec7e","x":3680,"y":-1160,"width":420,"height":200,"color":"2","type":"text","text":"**LivingEntity.tick** \nResponsavel por verificar a entidade em si, O movimento, interações como ataque ou players, estado de saúde e comportamento da IA"},
+		{"id":"e9053d04121807bd","x":3680,"y":-1440,"width":423,"height":160,"color":"2","type":"text","text":"**AgeableMob.aiStep** \nverifica a idade de um villager, a cada tick do servidor esse método é chamado\n"},
+		{"id":"5e30d722121ed0a7","x":3861,"y":-1640,"width":331,"height":105,"color":"2","type":"text","text":"**Mob.aiStep**\nmais sobre as ações do mob"}
+	],
+	"edges":[
+		{"id":"2e8d801821fe9e73","fromNode":"6a92373bf7d513d8","fromSide":"right","toNode":"49dbbc54b83bf398","toSide":"left"},
+		{"id":"515767eecfe607d2","fromNode":"49dbbc54b83bf398","fromSide":"top","toNode":"40c2a5bd3cd8421a","toSide":"bottom"},
+		{"id":"297333d898a0cd4c","fromNode":"40c2a5bd3cd8421a","fromSide":"right","toNode":"fe7920dfde283947","toSide":"left"},
+		{"id":"32c130d1e0bc44ec","fromNode":"40c2a5bd3cd8421a","fromSide":"right","toNode":"37983899ab466e0e","toSide":"left"},
+		{"id":"79a6516e6c0291bc","fromNode":"37983899ab466e0e","fromSide":"bottom","toNode":"8f2428e270bb9ce7","toSide":"left"},
+		{"id":"93f37fd0aa88f30c","fromNode":"8f2428e270bb9ce7","fromSide":"bottom","toNode":"aecd9cc0e1a00bca","toSide":"left"},
+		{"id":"d87840b45afb1c1b","fromNode":"aecd9cc0e1a00bca","fromSide":"right","toNode":"e36f7cca16524f83","toSide":"left"},
+		{"id":"6a3445decd62ebd8","fromNode":"e36f7cca16524f83","fromSide":"right","toNode":"6bc1fc9d664c57c9","toSide":"left"},
+		{"id":"796f1647f81e0d75","fromNode":"6bc1fc9d664c57c9","fromSide":"right","toNode":"009f2111c9f1e5c8","toSide":"left"},
+		{"id":"ad8a3586776d8d21","fromNode":"009f2111c9f1e5c8","fromSide":"right","toNode":"52ee17334dda7536","toSide":"left"},
+		{"id":"620ec7b5c94383c2","fromNode":"009f2111c9f1e5c8","fromSide":"right","toNode":"9b19e3340b24ee8a","toSide":"left"},
+		{"id":"efc00973fd4141c4","fromNode":"009f2111c9f1e5c8","fromSide":"right","toNode":"6e57ffa91a13dfc7","toSide":"left"},
+		{"id":"77a2ffb52369a3c2","fromNode":"52ee17334dda7536","fromSide":"top","toNode":"0b199febb1927d28","toSide":"bottom"},
+		{"id":"cf09ebc2dff40ba2","fromNode":"0b199febb1927d28","fromSide":"top","toNode":"dbcd7968292c4891","toSide":"bottom"},
+		{"id":"3679cc38c94a4c67","fromNode":"dbcd7968292c4891","fromSide":"top","toNode":"a62fe37cf15fec7e","toSide":"bottom"},
+		{"id":"01c51b3723489a93","fromNode":"a62fe37cf15fec7e","fromSide":"top","toNode":"e9053d04121807bd","toSide":"bottom"},
+		{"id":"fdd77adfe71e1cf3","fromNode":"e9053d04121807bd","fromSide":"top","toNode":"5e30d722121ed0a7","toSide":"bottom"}
+	]
+}
